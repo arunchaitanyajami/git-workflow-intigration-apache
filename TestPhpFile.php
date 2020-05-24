@@ -1,5 +1,5 @@
 <?php
 
-function test(){
+function test()  {
 	return true;
 }
