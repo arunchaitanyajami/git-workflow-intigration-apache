@@ -9,8 +9,8 @@ jobs:
       - run:
           name: Update all Packages
           command: |
-            sudo apt-get update
-            sudo apt-get install php7.2
+            apt-get update
+            apt-get install php7.2
             php -v
       - run:
           name: Install Composer
