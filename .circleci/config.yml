@@ -2,11 +2,13 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: cimg/base:2020.01
+      - image: ubuntu-latest
 
     steps:
       - checkout
-
+      - run:
+          name: Install project dependencies
+          command: php composer.phar install
       - run:
           name: Install Composer
           command: |
