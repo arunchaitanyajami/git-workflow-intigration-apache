@@ -14,6 +14,9 @@ jobs:
           name: Upgrade all Packages
           command: sudo apt-get upgrade
       - run:
+          name: Install Php Cli
+          command: sudo apt-get install php-cli
+      - run:
           name: Install Composer
           command: |
             curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
