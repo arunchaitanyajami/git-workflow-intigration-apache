@@ -9,9 +9,10 @@ jobs:
 
       - run:
           name: Update all Packages
-          command: |
-          sudo apt-get update
-          php -i | grep pcntl
+          command: sudo apt-get update
+      - run:
+          name: Upgrade all Packages
+          command: sudo apt-get upgrade
       - run:
           name: Install Composer
           command: |
