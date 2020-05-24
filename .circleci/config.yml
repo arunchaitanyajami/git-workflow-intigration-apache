@@ -23,6 +23,8 @@ jobs:
             sudo apt-get install nodejs
             sudo apt-get install npm
             nodejs -v
+            node --version
+            npm --version
       - run:
           name: Npm project dependencies
           command: npm install
