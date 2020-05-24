@@ -1,5 +1,6 @@
 #!/bin/sh
 
+which git
 # shellcheck disable=SC2006
 PROJECT=`php -r "echo dirname(dirname(realpath('$0')));"`
 # shellcheck disable=SC2006
