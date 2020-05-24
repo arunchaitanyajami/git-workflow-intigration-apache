@@ -2,14 +2,11 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu
+      - image: ubuntu18.04-php7.2-apache
 
     steps:
       - checkout
 
-      - run:
-          name: Install Sudo
-          command: apt-get install sudo
       - run:
           name: Update all Packages
           command: sudo apt-get update
