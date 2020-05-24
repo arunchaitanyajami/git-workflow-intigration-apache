@@ -1,10 +1,14 @@
 <?php
+/**
+ * Php Testing file.
+ */
+
 
 /**
- * Test
+ * Functional Document.
  *
  * @return bool
  */
-function test() {
+function test( ){
 	return true;
 }
