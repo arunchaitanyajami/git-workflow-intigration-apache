@@ -11,11 +11,6 @@ jobs:
           name: Update all Packages
           command: sudo apt-get update
       - run:
-          name: Install Php
-          command: |
-            sudo apt-get install php7.2
-            php -v
-      - run:
           name: Install Composer
           command: |
             php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
