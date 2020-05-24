@@ -2,7 +2,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: ubuntu18.04-php7.2-apache
+      - image: circleci/php@0.1.2
 
     steps:
       - checkout
