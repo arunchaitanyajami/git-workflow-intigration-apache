@@ -18,6 +18,9 @@ jobs:
           name: Install project dependencies
           command: composer install
       - run:
+          name: Npm project dependencies
+          command: npm install
+      - run:
           name: Running PHPCS
           command: bash ./.circleci/bin/phpcs.sh
       - run:
