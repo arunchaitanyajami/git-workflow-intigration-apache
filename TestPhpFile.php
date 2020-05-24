@@ -1,6 +1,8 @@
 <?php
 /**
  * Php Testing file.
+ *
+ * @package Php7.4
  */
 
 
@@ -9,6 +11,6 @@
  *
  * @return bool
  */
-function test( ){
+function test() {
 	return true;
 }
