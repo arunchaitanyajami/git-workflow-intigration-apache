@@ -17,7 +17,7 @@ fi
 SFILES=${SFILES:-$STAGED_FILES_CMD}
 
 echo "Checking PHP Lint..."
-echo "$SFILES"
+ls -als
 for FILE in $SFILES
 do
   chmod +x $PROJECT/$FILE;
