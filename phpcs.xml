@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<ruleset name="">
+    <description>NewsUK Sniffs for WordPress plugins</description>
+
+    <rule ref="PHPCompatibility"/>
+    <!-- Include WordPress ruleset -->
+    <rule ref="WordPress-Core"/>
+
+    <!-- Include WordPress ruleset -->
+    <rule ref="WordPress-Docs"/>
+
+    <!-- Include WordPress-Extra ruleset -->
+    <rule ref="WordPress-Extra"/>
+
+    <!-- Include the base VIP Go ruleset -->
+    <rule ref="WordPress-VIP-Go"/>
+
+    <config name="testVersion" value="7.0-"/>
+
+    <rule ref="WordPress">
+        <exclude name="WordPress.Files.FileName.NotHyphenatedLowercase" />
+        <exclude name="WordPress.Files.FileName.InvalidClassFileName" />
+    </rule>
+
+    <arg name="extensions" value="php"/>
+    <arg value="s"/>
+
+    <exclude-pattern>*/dev-lib/*</exclude-pattern>
+    <exclude-pattern>*/node_modules/*</exclude-pattern>
+    <exclude-pattern>*/vendor/*</exclude-pattern>
+    <exclude-pattern>.github/</exclude-pattern>
+</ruleset>

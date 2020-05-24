@@ -1,19 +1,28 @@
-workflows:
-  version: 2.1
-  on: pull_request
-  name: Inspections
-  jobs:
-    runPHPCSInspection:
-      name: Run PHPCS inspection
-      runs-on: ubuntu-latest
-      steps:
-        - uses: actions/checkout@v2
-          with:
-            ref: ${{ github.event.pull_request.head.sha }}
-        - name: Run PHPCS inspection
-          uses: rtCamp/action-phpcs-code-review@v2.0.2
-          env:
-            GH_BOT_TOKEN: ${{ secrets.GH_BOT_TOKEN }}
-            SKIP_FOLDERS: "tests,.github"
-          with:
-            args: "WordPress,WordPress-Core,WordPress-Docs"
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/php:7.1-node-browsers
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install Composer
+          command: |
+            php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+            php -r "if (hash_file('SHA384', 'composer-setup.php') === trim(file_get_contents('https://composer.github.io/installer.sig'))) { echo 'Installer verified'; } else { echo 'Installer invalid'; unlink('composer-setup.php'); } echo PHP_EOL;"
+            php composer-setup.php
+            php -r "unlink('composer-setup.php');"
+      - run:
+          name: Install project dependencies
+          command: php composer.phar install
+      - run:
+          name: Running PHPCS
+          command: bash ./.circleci/bin/phpcs.sh
+      - run:
+          name: Running EsLinting
+          command: bash ./.circleci/bin/eslint.sh
+      - run:
+          name: Running StyleLinting
+          command: bash ./.circleci/bin/stylelint.sh
