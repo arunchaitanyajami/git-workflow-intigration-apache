@@ -6,11 +6,17 @@ jobs:
 
     steps:
       - checkout
+
+      - run:
+          name: Install Sudo
+          command: apt-get install sudo
       - run:
           name: Update all Packages
+          command: sudo apt-get update
+      - run:
+          name: Install Php
           command: |
-            apt-get update
-            apt-get install php7.2
+            sudo apt-get install php7.2
             php -v
       - run:
           name: Install Composer
