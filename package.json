@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "eslint": "echo \"Progress: Running Eslint \" && eslint '**/*.js'",
-    "stylelint": "echo \"Progress: Running Style Linting \" && stylelint '**/*.css'",
-    "phpchecks": "echo \"Progress: Running PHPCS Checks for changed files \" && chmod +x  bin/pre-commit.sh && ./bin/pre-commit.sh"
+    "eslint": "echo \"Progress: Running Eslint \" && eslint 'assets/**/*.js'",
+    "stylelint": "echo \"Progress: Running Style Linting \" && stylelint 'assets/**/*.css'",
+    "phpchecks": "echo \"Progress: Running PHPCS Checks for changed files \" && chmod +x  bin/phpcs.sh && ./bin/phpcs.sh"
   },
   "repository": {
     "type": "git",

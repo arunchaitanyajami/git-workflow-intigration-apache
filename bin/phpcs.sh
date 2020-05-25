@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # shellcheck disable=SC2006
-PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
+PROJECT=`php -r "echo dirname(dirname(realpath('$0')));"`
 # shellcheck disable=SC2006
 STAGED_FILES_CMD=`git diff --name-only --diff-filter=ACMR PREV_VERSION | grep \\\\.php`
 

@@ -33,10 +33,10 @@ jobs:
           command: npm install
       - run:
           name: Running PHPCS
-          command: bash ./.circleci/bin/phpcs.sh
+          command: npm run phpchecks
       - run:
           name: Running EsLinting
-          command: bash ./.circleci/bin/eslint.sh
+          command: npm run eslint
       - run:
           name: Running StyleLinting
-          command: bash ./.circleci/bin/stylelint.sh
+          command: npm run stylelint
