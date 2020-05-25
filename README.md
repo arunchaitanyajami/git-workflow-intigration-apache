@@ -6,6 +6,8 @@ This has 3 parts
 - Git Workflow
 - Pre-commit
 
+This will use docker PHP7.4 ( Latest as per today's date )
+
 If you want only Circle Ci please use ``.circleci`` folder.
 If you want only git workflow please use ``.github`` folder.
 If you want only pre-commit please remove ``.github and .circleci`` folder.
