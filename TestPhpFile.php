@@ -11,6 +11,6 @@
  *
  * @return bool
  */
-function test()   {
+function test()  {
 	return true;
 }
