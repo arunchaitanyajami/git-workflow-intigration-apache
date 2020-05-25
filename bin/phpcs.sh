@@ -1,11 +1,5 @@
 #!/bin/sh
 
-LASTCOMMIT=`git rev-parse HEAD`
-GET_STAGED_FILES=`git diff-tree --no-commit-id --name-only -r $LASTCOMMIT`
-
-echo $GET_STAGED_FILES
-echo $LASTCOMMIT
-
 # shellcheck disable=SC2006
 PROJECT=`php -r "echo dirname(dirname(realpath('$0')));"`
 # shellcheck disable=SC2006
