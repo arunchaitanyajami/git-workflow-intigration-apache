@@ -5,7 +5,6 @@
  * @package Php7.4
  */
 
-
 /**
  * Functional Document.
  *
