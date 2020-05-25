@@ -9,7 +9,7 @@ echo $LASTCOMMIT
 # shellcheck disable=SC2006
 PROJECT=`php -r "echo dirname(dirname(realpath('$0')));"`
 # shellcheck disable=SC2006
-STAGED_FILES_CMD=`git diff --cached  --name-only HEAD~1 HEAD~2 | grep \\\\.php`
+STAGED_FILES_CMD=`git diff --name-only HEAD~1 HEAD~2 | grep \\\\.php`
 
 # Determine if a file list is passed
 if [ "$#" -eq 1 ]
