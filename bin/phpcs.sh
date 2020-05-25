@@ -3,7 +3,7 @@
 # shellcheck disable=SC2006
 PROJECT=`php -r "echo dirname(dirname(realpath('$0')));"`
 # shellcheck disable=SC2006
-STAGED_FILES_CMD=`git diff --name-only --diff-filter=ACMR PREV_VERSION | grep \\\\.php`
+STAGED_FILES_CMD=`git diff --name-only --diff-filter=ACMR HEAD | grep \\\\.php`
 
 # Determine if a file list is passed
 if [ "$#" -eq 1 ]
