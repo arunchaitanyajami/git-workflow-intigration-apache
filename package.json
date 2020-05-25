@@ -31,5 +31,12 @@
     "stylelint-config-recommended": "^3.0.0",
     "stylelint-config-standard": "^20.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "pre-commit": "^1.2.2"
+  },
+  "pre-commit": [
+    "eslint",
+    "stylelint",
+    "phpchecks"
+  ]
 }
